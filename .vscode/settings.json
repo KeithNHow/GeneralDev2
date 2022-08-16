@@ -14,12 +14,19 @@
     "al.backgroundCodeAnalysis": false,
     "al.enableCodeActions": false,
     "al.incrementalBuild": true,
+    "al.compilationOptions": 
+    {
+        "generateReportLayout": true
+    },
     "editor.codeLens": false,
 
     "CRS.DisableDefaultAlSnippets": false,
     "CRS.OnSaveAlFileAction": "Rename",
-    "CRS.FileNamePattern": "<ObjectId>.<ObjectName>.<ObjectTypeShortPascalCase>.al",
-    "CRS.FileNamePatternExtensions": "<ObjectId>.<ObjectName>.<ObjectTypeShortPascalCase>.al",
-    "CRS.FileNamePatternPageCustomizations": "<ObjectId>.<ObjectName>.<ObjectTypeShortPascalCase>.al"
-   
+    "CRS.FileNamePattern": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternPageCustomizations": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
+    "workbench.colorCustomizations": {
+    "editorError.foreground": "#be0101", 
+    "editorWarning.foreground": "#dceb06"
+    }
 }
