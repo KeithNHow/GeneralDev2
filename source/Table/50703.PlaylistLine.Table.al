@@ -28,9 +28,9 @@ table 50703 "Playlist_Line"
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
-            TableRelation = IF (Type = CONST(Resource)) Resource."No." ELSE
-            IF (Type = CONST(Show)) "Radio_Show"."No." ELSE
-            IF (Type = CONST(Item)) Item."No.";
+            TableRelation = if (Type = const(Resource)) Resource."No." else
+            if (Type = const(Show)) "Radio_Show"."No." else
+            if (Type = const(Item)) Item."No.";
         }
         field(50; DataF; Enum "Data_Format")
         {

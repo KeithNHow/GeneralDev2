@@ -158,13 +158,12 @@ page 50711 "Radio_Show_List"
                 }
             }
         }
-        Area(factboxes)
+        area(factboxes)
         {
             part("Radio Show Fan ListPart"; "Radio_Show_Fan_ListPart")
             {
                 ApplicationArea = All;
             }
-
         }
     }
 }

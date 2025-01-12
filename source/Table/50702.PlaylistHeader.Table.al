@@ -66,7 +66,7 @@ table 50702 "Playlist_Header"
             Caption = 'Advertisement Count';
             FieldClass = FlowField;
             Description = 'Data Format Advertisement';
-            CalcFormula = count("Playlist_Line" where("Playlist No." = field("No."), Type = const(Item), DataF = Const(Advertisement)));
+            CalcFormula = count("Playlist_Line" where("Playlist No." = field("No."), Type = const(Item), DataF = const(Advertisement)));
         }
         field(120; "News Required"; Integer)
         {

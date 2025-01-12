@@ -37,7 +37,7 @@ table 50710 "Radio_Show"
             Caption = 'Resource Name';
             Description = 'Flowfield: Resource.Name';
             FieldClass = Flowfield;
-            CalcFormula = Lookup(Resource.Name WHERE("No." = FIELD("Resource No.")));
+            CalcFormula = lookup(Resource.Name where("No." = field("Resource No.")));
         }
         field(60; "Run Time"; Duration)
         {
@@ -138,26 +138,26 @@ table 50710 "Radio_Show"
         {
             Caption = 'Avg. Listeners';
             FieldClass = FlowField;
-            CalcFormula = Average("Listener_Ledger".Listeners where(Date = Field("Date Filter")));
+            CalcFormula = average("Listener_Ledger".Listeners where(Date = field("Date Filter")));
         }
         field(260; "Avg. Listener Share"; Decimal)
         {
             Caption = 'Avg. Listener Share';
             FieldClass = FlowField;
-            CalcFormula = Average("Listener_Ledger"."Listener Share" where(Date = field("Date Filter")));
+            CalcFormula = average("Listener_Ledger"."Listener Share" where(Date = field("Date Filter")));
 
         }
         field(270; "Advertising Revenue"; Decimal)
         {
             Caption = 'Advertising Revenue';
             FieldClass = FlowField;
-            CalcFormula = Sum("Radio_Show_Ledger"."Fee Amount" where(Date = field("Date Filter"), DataF = filter(5)));
+            CalcFormula = sum("Radio_Show_Ledger"."Fee Amount" where(Date = field("Date Filter"), DataF = filter(5)));
         }
         field(280; "Royalty Cost"; Decimal)
         {
             Caption = 'Royalty Cost';
-            Fieldclass = Flowfield;
-            CalcFormula = Sum("Radio_Show_Ledger"."Fee Amount" where(Date = field("Date Filter"), DataF = filter(1 | 2 | 3)));
+            Fieldclass = FlowField;
+            CalcFormula = sum("Radio_Show_Ledger"."Fee Amount" where(Date = field("Date Filter"), DataF = filter(1 | 2 | 3)));
         }
         field(290; "Date Filter"; Date)
         {
